@@ -5,7 +5,7 @@ export const contact = (target) =>{
 </h1>
 
 `
-target.innerHTML = htmla
+target.innerHTML = html
 
 }
 

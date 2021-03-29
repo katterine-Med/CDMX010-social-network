@@ -3,32 +3,29 @@ import { onNavigate } from './router.js';
 export const home = (target) => {
     // const rootDiv =document.getElementById('root');
   const html = `
-    <header>
     
-<nav class= "mainmenu" id= "topbar">
-        <label for ="btnmenu"><img src="../assets/burgerbutton.png"></label>
-        <ul>
+  
+  <div id="home">
 
-         <li><a id="contact" href="#">Creadoras :3</a> </li>
-        </ul>
-        
-    </nav>
-    <h1 class = "rsTitle"> Red Social <h1>
-    <p class="rsDesc">  a todos? Recomendaciones viajes :) </p>
-
-
-    <button type= "button" class= "signUpButton" id= "signUpButton" href="#"> Regístrate </button>
-    <button type= "button" class= "logInButton" id= "logInButton" href="#"> Inicia sesión </button>
-
-    </header>
-    <body>
-    <div class="imgp" <img src="../Assets/backgroundtwo.jpg" width="100%" >
+    <div class="description">
+    <h1 class = "rsTitle"> ¡A pueblear! <h1>
+    <p class="rsDesc"> Ahora tendrás a quién preguntarle qué camión tomar para llegar el nevado de Toluca y no morir en el intento. <br>
+    Si comiste unas tlayudas deliciosas ó si te hospedaste en un lugar super chulo, y quieres hacer una recomendación estas en el lugar indicado, ¡Date vuelo con tus recomendaciones! </p>
     </div>
-    </body>
+    <div class="flexContainer">
+    <button type= "button" class= "buttonHome" id= "signUpButton" href="#"> Regístrate </button>
+    <button type= "button" class= "buttonHome" id= "logInButton" href="#"> Inicia sesión </button>
+    <p><a id="contact" href="#">Creadoras :3</a> <p>
+    </div>
+    
+    </div>
+
+    
+    
     `
     
     /*"Acerca de" será pantalla de publicacion*/
-    target.innerHTML = html
+    target.innerHTML = html;
 
     document.getElementById('logInButton').addEventListener('click', (e) => {
         e.preventDefault()

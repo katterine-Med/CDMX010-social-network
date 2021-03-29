@@ -173,7 +173,7 @@ placeholder="Escribe un post"></textarea>
       });
     });
   
-       
+       /* 
       const btnIlove= document.querySelectorAll('.btnMg');
       btnIlove.forEach(btn => {
         btn.addEventListener('click', async (e) => {
@@ -193,15 +193,12 @@ placeholder="Escribe un post"></textarea>
         }
         return db.collection('posts').doc(id).arrayLove();
 
-        var user = firebase.auth().currentUser;
-        var name, email, uid, emailVerified;
-        if (user != null) {
-          email = user.email;
-          emailVerified = user.emailVerified;
-          uid = user.uid
+
 
         })
        
-      })
+
+
+      }) */
     }
     export default wall;

@@ -3,8 +3,8 @@ import {iniciarSesion} from "./lib/aut.js"
 export const login = (target) =>{
     const html= `
 
-<h1>Iniciar sesión</h1>
-<form action = '' class = 'formLogIn' id = 'formLogIn'>
+
+<form action  id = 'formLogIn'>
 <section class = "formLogIn" >
 <input class="controls" type="text" name="nombre" id="emaillogin" placeholder="Ingrese Correo">
 <input class="controls" type="password" name="nombre" id="passwordlogin" placeholder="Ingrese Contraseña">
