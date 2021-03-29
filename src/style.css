@@ -254,22 +254,20 @@ font-size: 5px;
 
 /*boton de cerrar sesion*/
 .btnEnd {
-    background-color:black;
+    background-color:transparent;
     width: 2em;
     height: 2em;
     border-color: transparent;
 }
 .btnEnd  img{
-    margin-left: 120px;
-    margin-bottom: 15px;
+    margin-right: 25%;
+    margin-left: 35%;
+    margin-bottom: 2%;
     outline: none;
     width: 2em;
     height: 2em;
-    position:-webkit-sticky;
-    position: sticky;
-
+    position: relative;
     
-   
 }
 
 .postContainer2{

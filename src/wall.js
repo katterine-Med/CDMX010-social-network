@@ -94,6 +94,10 @@ placeholder="Escribe un post"></textarea>
        <h4>${post.posted}</h4>
        
        <button class="btnDelete" data-id="${post.id}">Eliminar</button>
+
+       <button class="btnMg" data-id="${post.id}">Me Encanta</button>
+       <button class="btnEdit" data-id="${post.id}">Editar</button>
+       <span class="counter"  data-uid="" ></span> 
        </div>
        `;
        function deletePost(id) {
@@ -117,24 +121,87 @@ placeholder="Escribe un post"></textarea>
          }) 
          
        })
-    });
-  });
+       /*
+       function edit (id,title,posted){
+        document.getElementById('id').value = id;
+        document.getElementById('title').value = title;
+        document.getElementById('posted').value = posted;
+        var boton = document.getElementById('boton');
+        boton.innerHTML = 'editar';
+ 
+        boton.onclick = function(){
+          var editp =db.collection('post').doc(id);
+ 
+          var id = document.getElementById('id').value;
+          var title = document.getElementById('title').value;
+          var posted = document.getElementById('fecha').value;
+         
+          return editp.update()
+        }*/
+       /*
+       const btnEdit =document.querySelectorAll('.btnEdit');
+       btnEdit.forEach(btn =>{
+         const dataPost = await dataPost(e.target.dataset.ed);
+         const postEditing = dataPost.data();
+         editProcess = true;
+         id = dataPost.id;
+          
+         postSend ['title'].value = postEditing.title;
+         postSend ['posted'].value = postEditing.posted;
+         postSend ['btnPost'].innerText = 'save changes';
+        
+         if (!editProcess){
+          await save (title.value, posted.value);
+        } else {
+          await postEdit(id, {
+            title: title.value,
+            posted: posted.value,
+          }
+          
 
-
-  //funcion para borrar post//
-
-  
-    /*.then(() => {
-
-   
-   console.log("Document successfully deleted!");
- }).catch((error) => {
-   console.error("Error removing document: ", error);
- });*/
-
-
-  ///}
+          )
+          return db.collection('posts').doc(id).update();
+         }
+ 
+     
+ 
+ 
+       })*/
 
  
-}
-export default wall;
+ 
+      });
+    });
+  
+       
+      const btnIlove= document.querySelectorAll('.btnMg');
+      btnIlove.forEach(btn => {
+        btn.addEventListener('click', async (e) => {
+          const id = e.target.dataset.id;
+          console.log('hasta aqui all fine')
+
+          const dataPost = await post (e.target.dataset.id);
+          const postEdits = dataPost.data();
+
+          
+        const arrayLove = postEdits.IloveIt;
+          if (dataPost.post(id) === -1) {
+          postEdits.push(id);
+          dataPost.postEdits = postEdits.length;
+        } else if (dataPost.post(id) === 0) {
+          btnIlove.disabled = false;
+        }
+        return db.collection('posts').doc(id).arrayLove();
+
+        var user = firebase.auth().currentUser;
+        var name, email, uid, emailVerified;
+        if (user != null) {
+          email = user.email;
+          emailVerified = user.emailVerified;
+          uid = user.uid
+
+        })
+       
+      })
+    }
+    export default wall;
